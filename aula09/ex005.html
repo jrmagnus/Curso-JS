@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Fist steps</title>
+    <style>
+        body {
+            background: #250047;
+            color: white; 
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Starting DOM</h1>
+    <p>Here comes the result</p>
+    <p>Learning how to use <strong>DOM</strong> in JS.</p>
+    <div id="msg">Click Here</div>
+    <script>
+        var body = document.body
+        var p1 = document.getElementsByTagName("p")[0]
+        window.document.write(p1.innerText)
+        //var msg = document.getElementById("msg")
+        var msg = document.querySelector('div#msg')
+        msg.style.background = "null"
+    </script>
+</body>
+</html>
