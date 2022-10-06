@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Are you aged?</title>
+    <style>
+        body {
+            font: normal 36pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var name = prompt("What's your name?")
+        var age = Number(prompt("Your age?"))
+        var result = age >= 18 ? "you are +18" : "sorry you can't!"
+        document.write(`Hi ${name}, ${result}`)
+    </script>
+</body>
+</html>
