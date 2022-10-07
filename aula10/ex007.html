@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SumNumbers</title>
+    <style>
+        body {
+            font: normal 18pt Arial;
+        }
+        input {
+            width: 100px;
+        }
+        div#result {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sum of values</h1>
+    <input type="number" name="n1" id="n1"> +
+    <input type="number" name="n2" id="n2">
+    <input type="button" value="sum" onclick="sum()">
+    <div id="result"></div>
+    <script>
+        function sum() {
+            var n1 = (document.getElementById("n1"))
+            var n2 = (document.getElementById("n2"))
+            var result = document.getElementById("result")
+            n1 = Number(n1.value)
+            n2 = Number(n2.value)
+            var r = n1 + n2
+            result.innerHTML = `${n1} + ${n2} = <strong>${r}</strong>`
+        }
+    </script>
+</body>
+</html>
