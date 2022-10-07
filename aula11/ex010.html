@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detran</title>
+    <style>
+        body {
+            font: normal 20pt Arial;
+        }
+        input {
+            font: normal 16pt;
+        }
+        div#res {
+            margin-top: 20px;
+            font: italic 12pt;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ticket system</h1>
+    Speed: <input type="number" name="txtspd" id="txtspd"> Km/h
+    <input type="button" value="check" onclick="calc()">
+    <div id="res"></div>
+
+    <script>
+        function calc() {
+            var spdlmt = 60
+            var txtspd = document.querySelector('input#txtspd')
+            var res = document.getElementById("res")
+            var spd = Number(txtspd.value)
+            res.innerHTML = `Your speed is <strong>${spd}</strong>`
+            if (spd > 60) {
+                res.innerHTML = `Your speed is <strong>${spd}</strong> and you were fined for speeding!`
+            }
+        }
+    </script>
+</body>
+</html>
