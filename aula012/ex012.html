@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day Week</title>
+</head>
+<body>
+    <h1>Hello!</h1>
+    Today is...<div id="day"></div>
+    <script>
+        var day = document.getElementById("day")
+        var now = new Date()
+        var today = "Day"
+        var dayweek = now.getDay()
+        switch (dayweek) {
+            case 0:
+                today = "Sunday"
+                break;
+            case 1:
+                today = "Monday"
+                break;
+            case 2:
+                today = "Tuesday"
+                break
+            case 3:
+                today = "Wednesday"
+                break
+            case 4:
+                today = "Thursday"
+                break;
+            case 5:
+                today = "Friday"
+                break;
+            case 6:
+                today = "Saturday"
+                break
+            default:
+                today = "Error!"
+                break;
+        }
+        day.innerHTML = (`${today}`)
+    </script>
+</body>
+</html>

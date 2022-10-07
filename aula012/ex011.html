@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Votar</title>
+    <style>
+        body {
+            background-color: #f7e4c1;
+            font: normal 20pt Arial;
+        }
+        input {
+            width: 100px;
+            height: 20px;
+        }
+        div#res {
+            margin-top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Verifique se você precisa votar.</h1>
+    <p>Idade <input type="number" name="txtage" id="txtage"></p>
+    <input type="button" value="Ok" onclick="calc()">
+    <div id="res"></div>
+    <div id="time"></div>
+    <script>
+        function calc() {
+            var res = document.getElementById("res")
+            var age = document.getElementById("txtage")
+            age = Number(age.value)
+            if (age < 16) {
+            res.innerHTML = (`Você não pode votar!`)
+            } else if (age < 18 || age > 70) {
+            res.innerHTML = (`Seu voto é facultativo!`)
+            } else {
+            res.innerHTML = (`Seu voto é obrigratório!`)
+            }
+        }       
+    </script>
+</body>
+</html>
