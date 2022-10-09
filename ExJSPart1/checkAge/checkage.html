@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CheckAge</title>
+    <link rel="stylesheet" href="style.css">   
+</head>
+<body>
+    <header>
+        <h1>Check Age</h1>
+    </header>
+    <section>
+        <p>Year of birth:
+            <input type="number" name="txtyear" id="txtyear" min="1850">
+        </p>
+        <p>Sex:
+            <input type="radio" name="radsex" id="male">
+            <label for="male">Masculine</label>
+            <input type="radio" name="radsex" id="fema">
+            <label for="fema">Feminine</label>
+        </p>
+        <p>
+            <input type="button" value="check" onclick="check()">
+        </p>
+        <div id="res"></div>
+    </section>
+    <footer>
+        <p>&copy; JrMagnus</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
