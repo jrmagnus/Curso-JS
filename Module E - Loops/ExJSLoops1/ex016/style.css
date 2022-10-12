@@ -1,0 +1,40 @@
+body {
+    background-color: #363131;
+    /*font: normal 20pt Arial;*/
+    color: antiquewhite;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    font: bold 36pt Inter;
+}
+div#answer {
+    background-color: #5a5353;
+    width: 250px;
+    padding: 10px;
+    border-radius: 21px;
+    margin: auto;
+    text-align: center;
+    font: 12pt Inter;
+    gap: 10px
+}
+
+div#number {
+    font: normal 10pt;
+}
+
+input {
+    width: 100px;
+}
+
+div#res {
+    margin-top: 20px;
+    border-radius: 21px;
+    font: normal 20pt Inter;
+}
+
+#pict {
+    margin: 3px;
+    margin-top: 0px;
+}
