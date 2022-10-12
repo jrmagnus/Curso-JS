@@ -1,10 +1,12 @@
 body {
     background-color: aqua;
-    font: normal 15pt Arial;
+    font: normal 15pt Inter;
     text-align: center;
 }
 header {
     margin: auto;
+    width: 368px;
+    border-radius: 5px;
 }
 section{
     background-color: whitesmoke;
@@ -13,7 +15,9 @@ section{
     margin: auto;
     text-align: center;
     box-shadow: 3px 3px 8px rgb(87, 87, 87);
+    width: 368px;
 }
 footer{
     font-style: italic;
+    opacity: 0.7;
 }
