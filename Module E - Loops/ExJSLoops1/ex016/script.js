@@ -11,29 +11,21 @@ function count() {
         if (s == 0) {
             alert("Using step 1")
             s = 1
-            var count = ''
-            var start = ''
-            var finsh = ''
         } else {
             if ( n1 < n2 ) {
-                var start = n1
-                var finsh = n2
-                count = start
+                res.innerHTML = `Counting: `
+                for ( var i = n1; i <= n2; i += s ) {
+                    res.innerHTML += `${i}, `
+                }
+                res.innerHTML += `End!`
             } else if ( n1 > n2 ) {
-                var start = n2
-                var finsh = n1
-                count = start
-            }
-            while ( count < finsh ) {
-                var input = document.createElement('span')
-                input.innerHTML = (count + " 👉 ")
-                res.appendChild(input)
-                count = count + s
-            }
-            if ( count >= finsh ) {
-                var input = document.createElement('span')
-                input.innerHTML = (count + " 🏁 ")
-                res.appendChild(input)
+                res.innerHTML = `Counting: `
+                for ( var i = n1; i >= n2; i -= s ) {
+                    res.innerHTML += `${i}, `
+                }
+                res.innerHTML += `End!`
+            } else {
+                res.innerHTML = "Start and Finish are the same"
             }
         }
     }
