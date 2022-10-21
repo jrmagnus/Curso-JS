@@ -1,0 +1,50 @@
+:root {
+    --bg-color: linear-gradient(to bottom right, rgb(20, 20, 20), rgb(3, 0, 15));
+    --card-color: rgb(23, 23, 23);
+    --title-color: rgb(214, 211, 230);
+    --text-color: rgb(227, 225, 237);
+    --border-color: rgba(255, 255, 255, 0.1);
+    --shadow-color: rgba(0, 0, 0, 0.3);
+}
+
+body {
+    background: var(--card-color);
+    font: normal 15pt Inter;
+    width: 600px;
+    margin: auto;
+}
+
+header {
+    margin: auto;
+    text-align: center;
+    color: var(--title-color);
+}
+
+section{
+    background: var(--border-color);
+    color: var(--text-color);
+    border-radius: 5px;
+    padding: 15px;
+    margin: auto;
+    //text-align: center;
+    box-shadow: 3px 3px 8px var(--shadow-color);
+}
+
+#inputNumbers {
+    display: flex;
+    gap: 5px;
+}
+
+input {
+    width: 50px;
+}
+
+#numberList {
+    margin: 20px;
+    width: 300px;
+}
+
+footer{
+    font-style: italic;
+    color: var(--shadow-color);
+}
