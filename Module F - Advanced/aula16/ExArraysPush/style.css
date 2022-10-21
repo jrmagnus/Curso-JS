@@ -35,8 +35,14 @@ section{
     gap: 5px;
 }
 
-input {
+.textForm {
     width: 50px;
+}
+
+.button {
+    width: 100px;
+    margin: 2ps;
+    padding; 5px;
 }
 
 #numberList {

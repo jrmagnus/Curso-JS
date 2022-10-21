@@ -17,13 +17,16 @@
     <section>
         <div id="inputNumbers">
             Input a Number between 1 and 100:
-            <input type="number" name="numberTextInput" id="numberTextInput">
-            <input type="button" name="addButton" id="addButton" value="Add" onclick="inputNumber()">
+            <input type="number" class="textForm" name="numberTextInput" id="numberTextInput">
+            <input type="submit" class="button" name="addButton" id="addButton" value="Add" onclick="inputNumber()">
         </div>
         <div class="selectBox" id="selectBox" name="selectBox">
             <select name="numberList" id="numberList" class="numberList" size="6">
             </select>
         </div>
+        <p id="finishbutton">
+            <input type="button" class="button" name="finishButton" id="finishButton" value="Finish" onclick="calcAndOrder()" >
+        </p>
         <div id="result">
         </div>
     </section>
