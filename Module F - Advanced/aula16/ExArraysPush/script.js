@@ -13,6 +13,7 @@ function inputNumber() {
     if ( !isNumber(number.value) || inList(number.value, values) ) {
         alert(`Invalid value or allready addedd`)
     } else {
+        result.innerHTML = ''
         addNumber()
     }
     number.value = ''
@@ -44,10 +45,12 @@ function addNumber() {
 }
 
 function calcAndOrder() {
-    orderValues()
-    setMaxMin()
-    valuesSum()
-    inputResult()
+    if (values.length == 0) {
+        alert("Please input any value")
+    } else {
+        orderValues()
+        inputResult()
+    }
 }
 
 function orderValues() {
@@ -63,18 +66,14 @@ function orderValues() {
     }
 }
 
-function setMaxMin () {
-    let maxValue = ''
-    let minValue = ''
-}
-
-function valuesSum () {
-    let valuesSum = 0
-    for( i = 0; i < values.length; i++ ) {
-        valuesSum += values[i]
-    }
-}
-
 function inputResult() {
-    //todo
+    let maxValue = values[values.length -1]
+    let minValue = values[0]
+    let sumValue = values.reduce((a, b) => a + b, 0)
+    let medValue = sumValue / values.length
+    result.innerHTML += "<p>You have " + (values.length) + " values,</p>"
+    result.innerHTML += "<p>Maximum value is :" + maxValue + " </p>"
+    result.innerHTML += "<p>Minimum value is :" + minValue + " </p>"
+    result.innerHTML += "<p>Median of values is :" + medValue.toFixed(2) + " </p>"
+    result.innerHTML += "<p>Sum of values is :" + sumValue + " </p>"
 }
